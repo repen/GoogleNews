@@ -140,7 +140,6 @@ class GoogleNews:
         self.__key = key
         if self.__encode != "":
             self.__key = urllib.request.quote(self.__key.encode(self.__encode))
-        self.get_page()
 
     def build_response(self):
         url = self.url.replace(
