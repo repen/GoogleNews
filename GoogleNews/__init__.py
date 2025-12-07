@@ -163,7 +163,7 @@ class GoogleNews:
             logging.debug('Total count is not available when sort by date')
 
         result = content.find_all("a", attrs={'data-ved': True})
-        return result
+        return [] if len(result) <= 2 else result
 
     def remove_after_last_fullstop(self, s):
         # Find the last occurrence of the full stop
